@@ -1,0 +1,28 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "Chatapp with nodejs",
+  "main": "module-demo.js",
+  "dependencies": {
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "nodemon module-demo.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singhfulda/nodeChatApp.git"
+  },
+  "keywords": [
+    "node",
+    "chat",
+    "mongodb"
+  ],
+  "author": "Harjeet Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/singhfulda/nodeChatApp/issues"
+  },
+  "homepage": "https://github.com/singhfulda/nodeChatApp#readme"
+}

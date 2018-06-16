@@ -3,4 +3,4 @@ var _ = require('lodash');
 
 
 console.log(myModule.myText);
-console.log(_.random(1,400))
+console.log(_.random(1,100))
