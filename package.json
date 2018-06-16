@@ -2,13 +2,13 @@
   "name": "chatapp",
   "version": "1.0.0",
   "description": "Chatapp with nodejs",
-  "main": "module-demo.js",
+  "main": "demo.js",
   "dependencies": {
     "lodash": "^4.17.10"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "nodemon module-demo.js"
+    "test": "nodemon demo.js"
   },
   "repository": {
     "type": "git",
