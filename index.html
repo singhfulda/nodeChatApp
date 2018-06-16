@@ -16,9 +16,9 @@
         <div class="jumbotron">
          <h1 class="display-4">Send Message</h1>
          <br>
-         <input type="text" class="form-control" placeholder="Name">
+         <input id="name" type="text" class="form-control" placeholder="Name">
          <br>
-         <input type="text" class="form-control" placeholder="Message">
+         <textarea id="message" type="text" class="form-control" placeholder="Message"></textarea>
          <br>
          <button id="send" class="btn btn-success">Send</button>
         </div>
@@ -31,7 +31,8 @@
         //get messages from backend
         $(() => {
             $("#send").click(() => {
-                addMessages({name: 'Singh', message: 'Hallo'})
+                var message = {name: $("#name").val(), message: $("#message").val()}
+                postMessage(message)
             })
             getMessages()
         })
@@ -45,6 +46,10 @@
             $.get('http://localhost:3000/messages', (data) => {
                 data.forEach(addMessages); // as we are just passing elements so we can omit function call
             })
+        }
+         //get messages from backend
+        function postMessage(message) {
+            $.post('http://localhost:3000/messages', message)
         }
     </script>
 
