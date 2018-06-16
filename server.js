@@ -11,7 +11,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
 
-var dburl ='mongodb://user:user3733@ds163610.mlab.com:63610/chats-3733'
+var dburl ='mongodb://user:password@ds163610.mlab.com:63610/chats-3733'
  var Message = mongoose.model('Message',{
      name: String,
      message: String
