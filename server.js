@@ -19,8 +19,8 @@ app.get('/messages', (req,res) => {
 })
 
 app.post('/messages', (req,res) => {
-    console.log(req.body)
     messages.push(req.body)
+    io.emit('message', req.body)
     res.sendStatus(200)
 })
 io.on('connection', (socket) => {

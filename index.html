@@ -28,9 +28,7 @@
     </div>
     <script>
 
-        var socket = io();
-
-
+        var socket = io()
         //on document load listen for send event and
         //get messages from backend
         $(() => {
@@ -40,15 +38,18 @@
             })
             getMessages()
         })
+
+        //event listener from server message event
+        socket.on('message', addMessage)
         //add message to message area
-        function addMessages(message) {
+        function addMessage(message) {
             $('#messages').append(`<h4> ${message.name} </h4> <p> ${message.message} </p>`)
         }
 
         //get messages from backend
         function getMessages() {
             $.get('http://localhost:3000/messages', (data) => {
-                data.forEach(addMessages); // as we are just passing elements so we can omit function call
+                data.forEach(addMessage); // as we are just passing elements so we can omit function call
             })
         }
          //get messages from backend
