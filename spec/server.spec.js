@@ -23,3 +23,13 @@ describe('should return list of messages',()=> {
         })
     })
 })
+
+//Step 1. Create test to story and let it fail
+describe('get messages from user',() =>{
+    it('should return 200 ok', (done) => {
+        request.get('http://localhost:3000/messages/alex', (err, res)=>{
+         expect(res.statusCode).toEqual(200)
+         done()   
+        })
+    })
+})
