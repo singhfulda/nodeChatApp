@@ -32,4 +32,10 @@ describe('get messages from user',() =>{
          done()   
         })
     })
+    it('name should be alex', (done) => {
+         request.get('http://localhost:3000/messages/alex', (err, res)=>{
+         expect(JSON.parse(res.body)[0].name).toEqual('alex')
+         done()   
+        })       
+    })
 })

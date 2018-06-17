@@ -30,7 +30,8 @@ app.get('/messages', (req,res) => {
 })
 
 app.get('/messages/:user', (req,res) => {
-    Message.find({},(err,messages)=>{
+    var user = req.params.user
+    Message.find({name: user},(err,messages)=>{
         res.send(messages)
     })
     
